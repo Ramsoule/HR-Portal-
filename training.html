@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeopleFirst HR Portal — Training & Development</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .training-header {
+      background: var(--navy);
+      padding: 56px 48px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .training-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; color: white; line-height: 1.15; margin-bottom: 10px; }
+    .training-header p { color: rgba(255,255,255,0.6); font-weight: 300; }
+
+    .video-section { margin-bottom: 72px; }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      background: var(--navy);
+      border: 0.5px solid var(--gray-200);
+    }
+    .video-wrapper iframe {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .video-caption { margin-top: 14px; font-size: 13px; color: var(--gray-500); font-style: italic; text-align: center; }
+
+    .programme-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 72px; }
+    .programme-card {
+      background: var(--white);
+      border: 0.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 20px;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .programme-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+    .prog-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--gray-200);
+      min-width: 40px;
+    }
+    .prog-info h3 { font-size: 17px; font-weight: 500; color: var(--navy); margin-bottom: 5px; }
+    .prog-info p { font-size: 13px; color: var(--gray-500); font-weight: 300; margin-bottom: 10px; }
+    .prog-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .prog-meta { text-align: right; }
+    .prog-duration { font-size: 13px; font-weight: 600; color: var(--navy); white-space: nowrap; margin-bottom: 4px; }
+    .prog-intake { font-size: 12px; color: var(--gray-500); white-space: nowrap; margin-bottom: 12px; }
+    .enrol-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .enrol-btn:hover { background: var(--teal-light); }
+    .enrol-btn.secondary { background: transparent; color: var(--teal); border: 0.5px solid var(--teal); }
+    .enrol-btn.secondary:hover { background: #f0faf8; }
+
+    .learning-paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 72px; }
+    .path-card { background: var(--white); border-radius: var(--radius); border: 0.5px solid var(--gray-200); padding: 28px; }
+    .path-level { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+    .path-level.beginner { color: var(--teal); }
+    .path-level.intermediate { color: var(--gold); }
+    .path-level.advanced { color: var(--navy-mid); }
+    .path-card h3 { font-size: 18px; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
+    .path-card p { font-size: 13px; color: var(--gray-500); font-weight: 300; line-height: 1.65; margin-bottom: 18px; }
+    .path-modules { list-style: none; padding: 0; }
+    .path-modules li { font-size: 13px; color: var(--gray-700); padding: 7px 0; border-bottom: 0.5px solid var(--gray-100); display: flex; gap: 8px; }
+    .path-modules li:last-child { border-bottom: none; }
+    .path-modules li::before { content: '→'; color: var(--teal); }
+
+    .support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+    @media(max-width:768px){
+      .programme-card { grid-template-columns: 1fr; }
+      .prog-meta { text-align: left; }
+      .learning-paths, .support-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="culture.html">Company Culture</a>
+    <a href="recruitment.html">Careers</a>
+    <a href="benefits.html">Benefits</a>
+    <a href="training.html" class="active">Training</a>
+  </nav>
+</header>
+
+<div class="training-header">
+  <div class="hero-tag">Grow With Us</div>
+  <h1>Training & Development</h1>
+  <p>Continuous learning is the cornerstone of a fulfilling career at PeopleFirst. Invest in yourself — we'll invest alongside you.</p>
+</div>
+
+<main>
+
+  <!-- Stats Row -->
+  <div class="grid-4" style="margin-bottom:56px;">
+    <div class="card" style="text-align:center; padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:var(--teal); font-weight:600;">12</div>
+      <div style="font-size:13px; color:var(--gray-500); margin-top:4px;">Active Programmes</div>
+    </div>
+    <div class="card" style="text-align:center; padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:var(--gold); font-weight:600;">M 8,000</div>
+      <div style="font-size:13px; color:var(--gray-500); margin-top:4px;">Annual Learning Budget</div>
+    </div>
+    <div class="card" style="text-align:center; padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:var(--navy); font-weight:600;">86%</div>
+      <div style="font-size:13px; color:var(--gray-500); margin-top:4px;">Completion Rate</div>
+    </div>
+    <div class="card" style="text-align:center; padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:var(--teal); font-weight:600;">320+</div>
+      <div style="font-size:13px; color:var(--gray-500); margin-top:4px;">Employees Trained (2025)</div>
+    </div>
+  </div>
+
+  <!-- Embedded Training Video -->
+  <div class="video-section">
+    <div class="section-label">Featured Video</div>
+    <div class="section-title" style="margin-bottom:8px;">HR Training: Workplace Ethics & Professional Conduct</div>
+    <p class="section-sub" style="margin-bottom:24px;">All employees are required to complete this orientation module. Watch time: approximately 45 minutes.</p>
+    <div class="video-wrapper">
+      <!-- Embedded YouTube HR training video (public, royalty-free educational content) -->
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="HR Training: Workplace Ethics & Professional Conduct"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-caption">Module 1 of 6 — Workplace Ethics & Professional Conduct | PeopleFirst HR Training Series</div>
+  </div>
+
+  <!-- Training Programmes -->
+  <div class="section-label">Current Programmes</div>
+  <div class="section-title" style="margin-bottom:24px;">Enrol in a programme.</div>
+  <div class="programme-grid">
+
+    <div class="programme-card">
+      <div class="prog-num">01</div>
+      <div class="prog-info">
+        <h3>Management Essentials</h3>
+        <p>Foundational leadership skills for new and aspiring managers. Covers team dynamics, performance conversations, and decision-making.</p>
+        <div class="prog-tags">
+          <span class="tag">Leadership</span>
+          <span class="tag">Management</span>
+          <span class="tag navy">Certified</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">8 Weeks</div>
+        <div class="prog-intake">Next: 1 April 2026</div>
+        <a href="#enrol" class="enrol-btn">Enrol →</a>
+      </div>
+    </div>
+
+    <div class="programme-card">
+      <div class="prog-num">02</div>
+      <div class="prog-info">
+        <h3>Data Analytics for Business</h3>
+        <p>Hands-on training in Excel, Power BI, and basic Python for non-technical staff. Learn to read and present data confidently.</p>
+        <div class="prog-tags">
+          <span class="tag">Technology</span>
+          <span class="tag">Data</span>
+          <span class="tag gold">In Demand</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">6 Weeks</div>
+        <div class="prog-intake">Next: 15 April 2026</div>
+        <a href="#enrol" class="enrol-btn">Enrol →</a>
+      </div>
+    </div>
+
+    <div class="programme-card">
+      <div class="prog-num">03</div>
+      <div class="prog-info">
+        <h3>Project Management (PMP Prep)</h3>
+        <p>Structured preparation for the Project Management Professional certification. Company covers exam fees upon completion.</p>
+        <div class="prog-tags">
+          <span class="tag">Operations</span>
+          <span class="tag navy">Certified</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">12 Weeks</div>
+        <div class="prog-intake">Next: 6 May 2026</div>
+        <a href="#enrol" class="enrol-btn">Enrol →</a>
+      </div>
+    </div>
+
+    <div class="programme-card">
+      <div class="prog-num">04</div>
+      <div class="prog-info">
+        <h3>Effective Communication & Presentation</h3>
+        <p>Build confidence in written and verbal communication. Practical workshops with real presentation exercises and peer feedback.</p>
+        <div class="prog-tags">
+          <span class="tag">Soft Skills</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">4 Weeks</div>
+        <div class="prog-intake">Next: 3 April 2026</div>
+        <a href="#enrol" class="enrol-btn">Enrol →</a>
+      </div>
+    </div>
+
+    <div class="programme-card">
+      <div class="prog-num">05</div>
+      <div class="prog-info">
+        <h3>Financial Literacy for Employees</h3>
+        <p>Personal finance fundamentals — budgeting, saving, understanding your payslip, and planning for retirement.</p>
+        <div class="prog-tags">
+          <span class="tag">Finance</span>
+          <span class="tag">Wellbeing</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">2 Weeks</div>
+        <div class="prog-intake">Next: 20 March 2026</div>
+        <a href="#enrol" class="enrol-btn secondary">Waitlist</a>
+      </div>
+    </div>
+
+    <div class="programme-card">
+      <div class="prog-num">06</div>
+      <div class="prog-info">
+        <h3>Diversity, Equity & Inclusion</h3>
+        <p>Company-wide mandatory module. Builds awareness, dismantles bias, and creates the conditions for every employee to thrive.</p>
+        <div class="prog-tags">
+          <span class="tag">Mandatory</span>
+          <span class="tag">Culture</span>
+        </div>
+      </div>
+      <div class="prog-meta">
+        <div class="prog-duration">1 Day</div>
+        <div class="prog-intake">Rolling intake</div>
+        <a href="#enrol" class="enrol-btn">Enrol →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Learning Paths -->
+  <div class="section-label">Learning Pathways</div>
+  <div class="section-title" style="margin-bottom:28px;">Structured growth journeys.</div>
+  <div class="learning-paths">
+    <div class="path-card">
+      <div class="path-level beginner">Beginner Path</div>
+      <h3>New Employee Essentials</h3>
+      <p>For staff in their first 90 days. Everything you need to get oriented and productive fast.</p>
+      <ul class="path-modules">
+        <li>Company Orientation (Week 1)</li>
+        <li>Systems & Tools Training (Week 2)</li>
+        <li>DEI Foundations Module</li>
+        <li>Code of Conduct Workshop</li>
+        <li>Meet the Leadership Panel</li>
+      </ul>
+    </div>
+    <div class="path-card">
+      <div class="path-level intermediate">Intermediate Path</div>
+      <h3>Aspiring Leader Track</h3>
+      <p>For individual contributors aiming for their first people management role within 12–18 months.</p>
+      <ul class="path-modules">
+        <li>Management Essentials Programme</li>
+        <li>Communication & Presentation</li>
+        <li>Stakeholder Management Workshop</li>
+        <li>Cross-functional Project Assignment</li>
+        <li>Executive Mentoring Sessions</li>
+      </ul>
+    </div>
+    <div class="path-card">
+      <div class="path-level advanced">Advanced Path</div>
+      <h3>Senior Leadership Development</h3>
+      <p>For managers and senior contributors preparing for executive or director-level roles.</p>
+      <ul class="path-modules">
+        <li>Strategic Thinking Masterclass</li>
+        <li>Financial Acumen for Leaders</li>
+        <li>Change Management Certification</li>
+        <li>Board Presentation Skills</li>
+        <li>Executive Coaching (6 sessions)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Support -->
+  <div class="section-label">Learning Support</div>
+  <div class="section-title" style="margin-bottom:28px;">We're here to help you grow.</div>
+  <div class="support-grid">
+    <div class="card">
+      <div class="icon-box"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3 style="font-size:16px; font-weight:500; color:var(--navy); margin-bottom:8px;">Learning & Development Team</h3>
+      <p style="font-size:13px; color:var(--gray-500); font-weight:300; line-height:1.65;">Contact our L&D team to discuss your development goals, get a personalised learning plan, or request a new course.</p>
+      <a href="mailto:learning@peoplefirst.com" style="color:var(--teal); font-size:13px; font-weight:500; text-decoration:none; display:inline-block; margin-top:12px;">learning@peoplefirst.com →</a>
+    </div>
+    <div class="card">
+      <div class="icon-box"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+      <h3 style="font-size:16px; font-weight:500; color:var(--navy); margin-bottom:8px;">External Study Support</h3>
+      <p style="font-size:13px; color:var(--gray-500); font-weight:300; line-height:1.65;">PeopleFirst subsidises approved external qualifications up to M 8,000 per year. Apply through the HR portal before starting any course.</p>
+      <a href="#study-policy" style="color:var(--teal); font-size:13px; font-weight:500; text-decoration:none; display:inline-block; margin-top:12px;">View Study Policy →</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+      <p>Your dedicated HR portal — connecting employees to resources, opportunities, and a community built on respect and growth.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="culture.html">Company Culture</a>
+      <a href="recruitment.html">Careers</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="training.html">Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Policies</h4>
+      <a href="#leave-policy">Leave Policy</a>
+      <a href="#code-of-conduct">Code of Conduct</a>
+      <a href="#remote-work">Remote Work</a>
+      <a href="#data-privacy">Data Privacy</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact HR</h4>
+      <a href="mailto:hr@peoplefirst.com">hr@peoplefirst.com</a>
+      <a href="tel:+26622000000">+266 2200 0000</a>
+      <a href="#">Submit a Query</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PeopleFirst Corporation. All rights reserved.</span>
+    <span>Internal Use Only</span>
+  </div>
+</footer>
+
+</body>
+</html>

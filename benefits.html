@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeopleFirst HR Portal — Employee Benefits</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .benefits-hero {
+      background: var(--navy);
+      padding: 56px 48px;
+      border-bottom: 2px solid var(--gold);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+    .benefits-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; color: white; line-height: 1.15; margin-bottom: 10px; }
+    .benefits-hero p { color: rgba(255,255,255,0.6); font-weight: 300; }
+    .benefits-score { background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 28px 36px; text-align: center; }
+    .benefits-score-num { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 600; color: var(--gold-light); line-height: 1; }
+    .benefits-score-label { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; }
+
+    .benefits-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 72px; }
+    .benefit-cat { background: var(--white); border-radius: var(--radius); border: 0.5px solid var(--gray-200); overflow: hidden; }
+    .benefit-cat-header { padding: 20px 24px; border-bottom: 0.5px solid var(--gray-100); }
+    .benefit-cat-header h3 { font-size: 17px; font-weight: 500; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+    .benefit-cat-body { padding: 16px 24px; }
+    .benefit-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 0.5px solid var(--gray-100); font-size: 14px; }
+    .benefit-item:last-child { border-bottom: none; }
+    .benefit-item-name { color: var(--gray-700); font-weight: 400; }
+    .benefit-item-value { color: var(--teal); font-weight: 600; font-size: 13px; }
+
+    .leave-table { width: 100%; border-collapse: collapse; margin-bottom: 56px; background: var(--white); border-radius: var(--radius); overflow: hidden; border: 0.5px solid var(--gray-200); }
+    .leave-table th { background: var(--navy); color: white; padding: 14px 20px; font-size: 13px; font-weight: 500; text-align: left; letter-spacing: 0.04em; }
+    .leave-table td { padding: 14px 20px; font-size: 14px; border-bottom: 0.5px solid var(--gray-100); color: var(--gray-700); }
+    .leave-table tr:last-child td { border-bottom: none; }
+    .leave-table tr:hover td { background: #f8fffe; }
+    .leave-days { font-weight: 600; color: var(--teal); }
+
+    .wellness-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 72px; }
+    .wellness-card { background: var(--white); border-radius: var(--radius); border: 0.5px solid var(--gray-200); padding: 28px; display: flex; gap: 20px; }
+    .wellness-icon { width: 44px; height: 44px; border-radius: 10px; background: #e6f4f2; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .wellness-icon svg { width: 20px; height: 20px; stroke: var(--teal); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .wellness-card h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+    .wellness-card p { font-size: 13px; color: var(--gray-500); font-weight: 300; line-height: 1.6; }
+
+    @media(max-width:768px){
+      .benefits-hero { grid-template-columns: 1fr; }
+      .benefits-categories, .wellness-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="culture.html">Company Culture</a>
+    <a href="recruitment.html">Careers</a>
+    <a href="benefits.html" class="active">Benefits</a>
+    <a href="training.html">Training</a>
+  </nav>
+</header>
+
+<div class="benefits-hero">
+  <div>
+    <div class="hero-tag">What We Offer</div>
+    <h1>Employee Benefits</h1>
+    <p>We believe in rewarding the whole person — not just their output. Our comprehensive benefits package reflects that commitment.</p>
+  </div>
+  <div class="benefits-score">
+    <div class="benefits-score-num">94%</div>
+    <div class="benefits-score-label">Benefits Satisfaction Score</div>
+  </div>
+</div>
+
+<main>
+
+  <!-- Benefits Overview -->
+  <div class="section-label">Comprehensive Coverage</div>
+  <div class="section-title">Everything you need, covered.</div>
+  <p class="section-sub">From medical aid to retirement planning, our benefits are designed to give you and your family security and peace of mind.</p>
+
+  <div class="benefits-categories">
+    <div class="benefit-cat">
+      <div class="benefit-cat-header">
+        <h3>🏥 Health & Medical</h3>
+      </div>
+      <div class="benefit-cat-body">
+        <div class="benefit-item"><span class="benefit-item-name">Medical Aid (Employee)</span><span class="benefit-item-value">100% Covered</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Medical Aid (Family)</span><span class="benefit-item-value">60% Covered</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Dental & Optical</span><span class="benefit-item-value">Included</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Employee Wellness Programme</span><span class="benefit-item-value">Free Access</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Mental Health Support</span><span class="benefit-item-value">6 Sessions/yr</span></div>
+      </div>
+    </div>
+    <div class="benefit-cat">
+      <div class="benefit-cat-header">
+        <h3>💰 Financial</h3>
+      </div>
+      <div class="benefit-cat-body">
+        <div class="benefit-item"><span class="benefit-item-name">Pension Contribution</span><span class="benefit-item-value">10% Matched</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Life Insurance</span><span class="benefit-item-value">3× Annual Salary</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Disability Cover</span><span class="benefit-item-value">Included</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Annual Bonus</span><span class="benefit-item-value">Performance Based</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Staff Loan Scheme</span><span class="benefit-item-value">0% Interest</span></div>
+      </div>
+    </div>
+    <div class="benefit-cat">
+      <div class="benefit-cat-header">
+        <h3>🌍 Work & Lifestyle</h3>
+      </div>
+      <div class="benefit-cat-body">
+        <div class="benefit-item"><span class="benefit-item-name">Flexible Work Hours</span><span class="benefit-item-value">Core 10am–3pm</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Remote Work Days</span><span class="benefit-item-value">3 Days/week</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Transport Allowance</span><span class="benefit-item-value">M 1,200/mo</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Gym Membership</span><span class="benefit-item-value">Subsidised 50%</span></div>
+        <div class="benefit-item"><span class="benefit-item-name">Childcare Support</span><span class="benefit-item-value">M 800/mo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leave Entitlements -->
+  <div class="section-label">Leave Entitlements</div>
+  <div class="section-title" style="margin-bottom:24px;">Your leave breakdown.</div>
+  <table class="leave-table">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Entitlement</th>
+        <th>Notes</th>
+        <th>Carry Over</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Annual Leave</td>
+        <td class="leave-days">25 Days</td>
+        <td>Increases to 30 days after 5 years service</td>
+        <td>Up to 10 days</td>
+      </tr>
+      <tr>
+        <td>Sick Leave</td>
+        <td class="leave-days">30 Days</td>
+        <td>Medical certificate required after 3 consecutive days</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Maternity Leave</td>
+        <td class="leave-days">16 Weeks</td>
+        <td>Fully paid for first 12 weeks</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Paternity Leave</td>
+        <td class="leave-days">10 Days</td>
+        <td>Must be taken within 3 months of birth</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Study Leave</td>
+        <td class="leave-days">10 Days</td>
+        <td>For approved accredited qualifications</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Compassionate Leave</td>
+        <td class="leave-days">5 Days</td>
+        <td>Immediate family bereavement</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Unpaid Leave</td>
+        <td class="leave-days">Up to 30 Days</td>
+        <td>Subject to manager and HR approval</td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Wellness & Extra Perks -->
+  <div class="section-label">Wellness & Perks</div>
+  <div class="section-title" style="margin-bottom:28px;">Beyond the basics.</div>
+  <div class="wellness-grid">
+    <div class="wellness-card">
+      <div class="wellness-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div>
+        <h4>Employee Assistance Programme</h4>
+        <p>Confidential counselling and life coaching services available 24/7 to all employees and their immediate family members.</p>
+      </div>
+    </div>
+    <div class="wellness-card">
+      <div class="wellness-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+      <div>
+        <h4>Team Building & Social Events</h4>
+        <p>Quarterly team outings, annual company retreat, sports leagues, and a fully stocked recreation lounge at HQ.</p>
+      </div>
+    </div>
+    <div class="wellness-card">
+      <div class="wellness-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div>
+        <h4>Recognition & Rewards</h4>
+        <p>Monthly peer recognition, quarterly bonuses, long-service awards, and the annual PeopleFirst Excellence Awards.</p>
+      </div>
+    </div>
+    <div class="wellness-card">
+      <div class="wellness-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <div>
+        <h4>Relocation Assistance</h4>
+        <p>Up to M 25,000 relocation package for employees required to relocate. Includes temporary housing for up to 60 days.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leave Policy Link -->
+  <div class="card" style="background:var(--navy); color:white; border:none; display:flex; justify-content:space-between; align-items:center; padding:32px 40px; flex-wrap:wrap; gap:20px;">
+    <div>
+      <div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-light); margin-bottom:8px;">Full Policy Document</div>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; color:white;">Read the complete Benefits & Leave Policy</h3>
+      <p style="font-size:14px; color:rgba(255,255,255,0.55); font-weight:300; margin-top:6px;">Effective April 2026. Supersedes all previous editions.</p>
+    </div>
+    <a href="#leave-policy" id="leave-policy" class="btn-gold">View Full Policy</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+      <p>Your dedicated HR portal — connecting employees to resources, opportunities, and a community built on respect and growth.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="culture.html">Company Culture</a>
+      <a href="recruitment.html">Careers</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="training.html">Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Policies</h4>
+      <a href="#leave-policy">Leave Policy</a>
+      <a href="#code-of-conduct">Code of Conduct</a>
+      <a href="#remote-work">Remote Work</a>
+      <a href="#data-privacy">Data Privacy</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact HR</h4>
+      <a href="mailto:hr@peoplefirst.com">hr@peoplefirst.com</a>
+      <a href="tel:+26622000000">+266 2200 0000</a>
+      <a href="#">Submit a Query</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PeopleFirst Corporation. All rights reserved.</span>
+    <span>Internal Use Only</span>
+  </div>
+</footer>
+
+</body>
+</html>

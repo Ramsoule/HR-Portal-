@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeopleFirst HR Portal — Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .stats-strip {
+      background: var(--navy-mid);
+      display: flex;
+      padding: 24px 48px;
+    }
+    .stat { flex: 1; text-align: center; border-right: 0.5px solid rgba(255,255,255,0.1); padding: 8px; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: var(--gold-light); }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+    .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 80px; }
+    .welcome-visual {
+      background: var(--navy);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      min-height: 360px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 36px;
+    }
+    .welcome-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 70%);
+      opacity: 0.7;
+    }
+    .welcome-visual-content { position: relative; z-index: 1; color: white; }
+    .welcome-visual-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 8px; }
+    .welcome-visual-content p { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 300; }
+
+    .quick-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 80px; }
+    .quick-link {
+      background: var(--white);
+      border: 0.5px solid var(--gray-200);
+      border-left: 3px solid var(--teal);
+      border-radius: 8px;
+      padding: 20px 22px;
+      text-decoration: none;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.2s;
+    }
+    .quick-link:hover { background: #f0faf8; border-left-color: var(--teal-light); }
+    .quick-link-text h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 3px; }
+    .quick-link-text p { font-size: 13px; color: var(--gray-500); font-weight: 300; }
+    .quick-link-arrow { color: var(--teal); font-size: 20px; }
+
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .news-card { background: var(--white); border-radius: var(--radius); border: 0.5px solid var(--gray-200); overflow: hidden; }
+    .news-card-img { height: 140px; background: var(--navy); display: flex; align-items: center; justify-content: center; position: relative; }
+    .news-card-img span { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: rgba(255,255,255,0.12); }
+    .news-card-body { padding: 20px; }
+    .news-date { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .news-card-body h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 8px; line-height: 1.4; }
+    .news-card-body p { font-size: 13px; color: var(--gray-500); font-weight: 300; line-height: 1.6; }
+
+    @media(max-width:768px){
+      .stats-strip { padding: 20px; flex-wrap: wrap; }
+      .welcome-grid { grid-template-columns: 1fr; }
+      .quick-links { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="culture.html">Company Culture</a>
+    <a href="recruitment.html">Careers</a>
+    <a href="benefits.html">Benefits</a>
+    <a href="training.html">Training</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Your HR Partner — Internal Employee Portal</div>
+  <h1>Empowering People.<br>Building Futures.</h1>
+  <p>Welcome to the PeopleFirst HR Portal — your single destination for career resources, company policies, benefits information, and professional development.</p>
+  <a href="recruitment.html" class="btn-gold">Explore Open Roles</a>
+  <a href="benefits.html" class="btn-outline">View My Benefits</a>
+</div>
+
+<div class="stats-strip">
+  <div class="stat"><div class="stat-num">1,240</div><div class="stat-label">Employees Worldwide</div></div>
+  <div class="stat"><div class="stat-num">38</div><div class="stat-label">Open Positions</div></div>
+  <div class="stat"><div class="stat-num">94%</div><div class="stat-label">Satisfaction Rate</div></div>
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Training Programmes</div></div>
+</div>
+
+<main>
+
+  <!-- Welcome Section -->
+  <div class="welcome-grid">
+    <div>
+      <div class="section-label">Welcome</div>
+      <div class="section-title">A great place to grow.</div>
+      <p style="font-size:16px; color:var(--gray-700); font-weight:300; line-height:1.75; margin-bottom:24px;">At PeopleFirst, we believe our employees are our greatest asset. This portal gives you direct access to everything you need — from your leave balance to your next learning opportunity.</p>
+      <ul class="styled">
+        <li>Access HR policies and employee handbook</li>
+        <li>Browse internal job openings and apply online</li>
+        <li>Enrol in training and development programmes</li>
+        <li>Submit HR queries and track your requests</li>
+      </ul>
+    </div>
+    <div class="welcome-visual">
+      <div class="welcome-visual-content">
+        <div class="hero-tag" style="margin-bottom:12px;">Featured Initiative</div>
+        <h3>"Grow With Us" Programme 2025</h3>
+        <p>Applications are now open for our annual talent accelerator programme. Unlock mentorship, cross-functional projects and leadership coaching.</p>
+        <a href="training.html" style="color:var(--gold-light); font-size:14px; font-weight:500; text-decoration:none; display:inline-block; margin-top:14px;">Learn more →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Access Links -->
+  <div class="section-label">Quick Access</div>
+  <div class="section-title" style="margin-bottom:28px;">Find what you need fast.</div>
+  <div class="quick-links">
+    <a href="culture.html" class="quick-link">
+      <div class="quick-link-text"><h4>Our Culture & Values</h4><p>What makes PeopleFirst different</p></div>
+      <span class="quick-link-arrow">›</span>
+    </a>
+    <a href="recruitment.html" class="quick-link">
+      <div class="quick-link-text"><h4>Job Vacancies</h4><p>38 positions currently open</p></div>
+      <span class="quick-link-arrow">›</span>
+    </a>
+    <a href="benefits.html" class="quick-link">
+      <div class="quick-link-text"><h4>Employee Benefits</h4><p>Health, leave, pension & more</p></div>
+      <span class="quick-link-arrow">›</span>
+    </a>
+    <a href="training.html" class="quick-link">
+      <div class="quick-link-text"><h4>Training Programmes</h4><p>Upskill and advance your career</p></div>
+      <span class="quick-link-arrow">›</span>
+    </a>
+  </div>
+
+  <!-- Latest News -->
+  <div class="section-label">HR News</div>
+  <div class="section-title" style="margin-bottom:10px;">Latest from the HR team.</div>
+  <p class="section-sub">Stay informed with company announcements, policy updates, and upcoming events.</p>
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="news-card-img" style="background:var(--teal);"><span>📋</span></div>
+      <div class="news-card-body">
+        <div class="news-date">12 March 2026</div>
+        <h4>Updated Leave Policy — Effective April 2026</h4>
+        <p>Annual leave entitlements have been revised upward. Full details in the Employee Handbook.</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-card-img" style="background:var(--navy-mid);"><span>🏆</span></div>
+      <div class="news-card-body">
+        <div class="news-date">5 March 2026</div>
+        <h4>Q1 Employee Excellence Awards — Nominations Open</h4>
+        <p>Nominate a colleague who has gone above and beyond. Deadline: 28 March.</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-card-img" style="background:var(--gold);"><span>📚</span></div>
+      <div class="news-card-body">
+        <div class="news-date">1 March 2026</div>
+        <h4>New Leadership Development Cohort Forming</h4>
+        <p>Applications open for the 2026 Management Essentials programme. Limited seats available.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">PeopleFirst <span>HR</span></a>
+      <p>Your dedicated HR portal — connecting employees to resources, opportunities, and a community built on respect and growth.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="culture.html">Company Culture</a>
+      <a href="recruitment.html">Careers</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="training.html">Training</a>
+    </div>
+    <div class="footer-col">
+      <h4>Policies</h4>
+      <a href="#leave-policy">Leave Policy</a>
+      <a href="#code-of-conduct">Code of Conduct</a>
+      <a href="#remote-work">Remote Work</a>
+      <a href="#data-privacy">Data Privacy</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact HR</h4>
+      <a href="mailto:hr@peoplefirst.com">hr@peoplefirst.com</a>
+      <a href="tel:+26622000000">+266 2200 0000</a>
+      <a href="#">Submit a Query</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PeopleFirst Corporation. All rights reserved.</span>
+    <span>Internal Use Only</span>
+  </div>
+</footer>
+
+</body>
+</html>
